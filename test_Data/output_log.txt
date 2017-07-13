@@ -1,0 +1,29 @@
+Initialize engine version: 4.3.4f1 (e444f76e01cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.4709]
+    Renderer: NVIDIA GeForce GTX 660M  
+    Vendor:   NVIDIA
+    VRAM:     1985 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\UnityProject\Urine_simulator\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\UnityProject\Urine_simulator\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading F:\UnityProject\Urine_simulator\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.044 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+UnloadTime: 0.283802 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 263.
+Total: 0.793396 ms (FindLiveObjects: 0.015171 ms CreateObjectMapping: 0.011601 ms MarkObjects: 0.149933 ms  DeleteObjects: 0.040606 ms)
+
