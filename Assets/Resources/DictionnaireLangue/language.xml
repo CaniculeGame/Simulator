@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document>
+  <valeur name="oui">
+    <fr>Oui</fr>
+    <en>Yes</en>
+    <us>Yeah</us>
+    <be>Oui</be>
+  </valeur>
+
+  <valeur name="non">
+    <fr>Non</fr>
+    <en>No</en>
+    <us>No</us>
+    <be>Non</be>
+  </valeur>
+
+  <valeur name="erreur">
+    <fr>Erreur</fr>
+    <en>Error</en>
+    <us>Error</us>
+    <be>Erreur</be>
+  </valeur>
+
+  <valeur name="nouvelle_partie">
+    <fr>Nouveau jeu</fr>
+    <en>New game</en>
+    <us>New game</us>
+    <be>Nouveau jeu</be>
+  </valeur>
+
+  <valeur name="quitter">
+    <fr>Quitter</fr>
+    <en>Quit</en>
+    <us>Quit</us>
+    <be>Quitter</be>
+  </valeur>
+
+  <valeur name="jouer">
+    <fr>Jouer</fr>
+    <en>Play</en>
+    <us>Play</us>
+    <be>Jouer</be>
+  </valeur>
+
+  <valeur name="stats">
+    <fr>Stats</fr>
+    <en>Stat</en>
+    <us>Stat</us>
+    <be>Stat</be>
+  </valeur>
+
+  <valeur name="option">
+    <fr>Options</fr>
+    <en>Option</en>
+    <us>Option</us>
+    <be>Options</be>
+  </valeur>
+
+  <valeur name="quitter_question">
+    <fr>Quitter le jeu?</fr>
+    <en>Quit the game?</en>
+    <us>Quit the game?</us>
+    <be>Quitter le jeu?</be>
+  </valeur>
+
+  <valeur name="retour">
+    <fr>Retour</fr>
+    <en>Return</en>
+    <us>Return</us>
+    <be>Retour</be>
+  </valeur>
+
+
+  <valeur name="suivant">
+    <fr>Suivant</fr>
+    <en>Next</en>
+    <us>Next</us>
+    <be>Suivant</be>
+  </valeur>
+
+  <valeur name="precedent">
+    <fr>Precedent</fr>
+    <en>Previous</en>
+    <us>Previous</us>
+    <be>Precedent</be>
+  </valeur>
+
+  <valeur name="continuer">
+    <fr>Continuer</fr>
+    <en>Continue</en>
+    <us>Continue</us>
+    <be>Continuer</be>
+  </valeur>
+
+
+  <valeur name="continuerb">
+    <fr>Continuer ?</fr>
+    <en>Continue ?</en>
+    <us>Continue ?</us>
+    <be>Continuer ?</be>
+  </valeur>
+
+  <valeur name="perdu">
+    <fr>Perdu</fr>
+    <en>You lose</en>
+    <us>You lose</us>
+    <be>Perdu</be>
+  </valeur>
+
+  <valeur name="quitter_vers_menu">
+    <fr>Retour au menu</fr>
+    <en>Return to main scrren</en>
+    <us>Return to main scrren</us>
+    <be>Retour au menu</be>
+  </valeur>
+
+  <valeur name="devise">
+    <fr>€</fr>
+    <en>£</en>
+    <us>$</us>
+    <be>€</be>
+  </valeur>
+
+  <valeur name="pause">
+    <fr>Pause</fr>
+    <en>Pause</en>
+    <us>Pause</us>
+    <be>Pause</be>
+  </valeur>
+
+  <valeur name="son">
+    <fr>Effet sonnore</fr>
+    <en>Sound Effect</en>
+    <us>Sound Effect</us>
+    <be>Effet sonnore</be>
+  </valeur>
+
+  <valeur name="musique">
+    <fr>Musique</fr>
+    <en>Music</en>
+    <us>Music</us>
+    <be>Musique</be>
+  </valeur>
+
+
+  <valeur name="chargement">
+    <fr>Chargement en cours</fr>
+    <en>Loading</en>
+    <us>Loading</us>
+    <be>Chargement en cours</be>
+  </valeur>
+
+ 
+
+  <valeur name="vibration">
+    <fr>Vibrations</fr>
+    <en>Vibrate</en>
+    <us>Vibrate</us>
+    <be>Vibrations</be>
+  </valeur>
+
+  <valeur name="ok">
+    <fr>OK</fr>
+    <en>OK</en>
+    <us>OK</us>
+    <be>OK</be>
+  </valeur>
+
+
+
+  <valeur name ="credit">
+    <fr>Credit</fr>
+    <en>Credit</en>
+    <us>Credit</us>
+    <be>Credit</be>
+  </valeur>
+
+
+  <valeur name ="test">
+    <fr>Test</fr>
+    <en>Test</en>
+    <us>Test</us>
+    <be>Test</be>
+  </valeur>
+
+  <valeur name ="lvl1">
+    <fr>Niveau 1</fr>
+    <en>Level 1</en>
+    <us>Level 1</us>
+    <be>Niveau 1</be>
+  </valeur>
+
+  <valeur name ="lvl2">
+    <fr>Niveau 2</fr>
+    <en>Level 2</en>
+    <us>Level 2</us>
+    <be>Niveau 2</be>
+  </valeur>
+
+  <valeur name ="lvl3">
+    <fr>Niveau 3</fr>
+    <en>Level 3</en>
+    <us>Level 3</us>
+    <be>Niveau 3</be>
+  </valeur>
+
+  <valeur name ="pts">
+    <fr>Pts</fr>
+    <en>Pts</en>
+    <us>Pts</us>
+    <be>Pts</be>
+  </valeur>
+
+  <valeur name ="langue">
+    <fr>Français</fr>
+    <en>English</en>
+    <us>UnitedStates</us>
+    <be>Belgique</be>
+  </valeur>
+
+  <valeur name ="vessie">
+    <fr>Vessie</fr>
+    <en>Bladder</en>
+    <us>Bladder</us>
+    <be>Vessie</be>
+  </valeur>
+
+
+  <valeur name ="score">
+    <fr>Score</fr>
+    <en>Score</en>
+    <us>Score</us>
+    <be>Score</be>
+  </valeur>
+
+
+  <valeur name ="sec">
+    <fr>Sec</fr>
+    <en>Sec</en>
+    <us>Sec</us>
+    <be>Sec</be>
+  </valeur>
+  
+  <valeur name ="recommencer">
+    <fr>Recommencer</fr>
+    <en>Restart</en>
+    <us>Restart</us>
+    <be>Recommencer</be>
+  </valeur>
+
+  
+  <valeur name ="choix_lvl">
+    <fr>Choix du niveau</fr>
+    <en>Choose Lvl</en>
+    <us>Choose Lvl</us>
+    <be>>Choix du niveau</be>
+  </valeur>
+
+</document>

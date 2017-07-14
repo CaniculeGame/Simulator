@@ -117,6 +117,11 @@ function LatchedFinger( fingerId : int )
 
 function Update()
 {	
+    this.gameObject.SetActive(false);
+
+    #if UNITY_ANDROID
+        this.gameObject.SetActive(true);
+
 	if ( !enumeratedJoysticks )
 	{
 		// Collect all joysticks in the game, so we can relay finger latching messages
@@ -243,4 +248,6 @@ function Update()
 		// Rescale the output after taking the dead zone into account
 		position.y = Mathf.Sign( position.y ) * ( absoluteY - deadZone.y ) / ( 1 - deadZone.y );
 	}
+
+    #endif
 }

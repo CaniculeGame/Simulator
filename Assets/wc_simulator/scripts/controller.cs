@@ -74,7 +74,7 @@ public class controller : MonoBehaviour
 	void controle()
 	{
 		//mouvement doite/gauche, haut/bas 
-	/*	if (axes == RotationAxes.MouseXAndY && !test_position(Input.GetTouch(0).position))
+		if (axes == RotationAxes.MouseXAndY)
 		{
 			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
 			rotationX = Mathf.Clamp (rotationX, minimumX, maximumX);
@@ -83,7 +83,7 @@ public class controller : MonoBehaviour
 			rotationZ = Mathf.Clamp (rotationZ, minimumZ, maximumZ);
 			
 			ctrl.transform.localEulerAngles = new Vector3(-rotationZ, 0, -rotationX);
-		}*/
+		}
 
 
 		//gestion de la puissance des particules
@@ -102,6 +102,6 @@ public class controller : MonoBehaviour
 
 	void OnGUI()
 	{
-		puissance=GUI.VerticalSlider(new Rect(0,Screen.height-110,50,100),puissance,5,0,skin.verticalSlider,skin.verticalSliderThumb);
+		puissance=GUI.VerticalSlider(new Rect(2 * Screen.width / 100 , 50 *Screen.height/100, 20 * Screen.width / 100, 50 * Screen.height / 100),puissance,5,0,skin.verticalSlider,skin.verticalSliderThumb);
 	}
 }

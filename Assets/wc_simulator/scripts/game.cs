@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 enum Etat
 {
@@ -21,8 +22,8 @@ public class game : MonoBehaviour
 	private int jauge_min = 0;
 	private int jauge = 100;
 	private int jauge_max = 100;
-	private int capacite_vessie_max = 600;
-	private int capacite_vessie = 600;
+    public  int capacite_vessie_max = 1600;
+	public  int capacite_vessie = 1600;
 	private float temps =0;
 
 	
@@ -45,7 +46,6 @@ public class game : MonoBehaviour
 		jauge_min = 0;
 		jauge_max = 100;
 		jauge = jauge_max;
-		capacite_vessie_max = 600;
 		capacite_vessie = capacite_vessie_max;
 		etat_courant=Etat.Start;
 		enPause = false;
@@ -168,35 +168,43 @@ public class game : MonoBehaviour
 
 	void OnGUI()
 	{
-		GUI.skin.font=myFont;
+        GUI.skin.label.fontSize = 36;
+        GUI.skin.button.fontSize = 36;
+        GUI.skin.font=myFont;
 
 		if(etat_courant != Etat.End)
 		{
-			GUI.Label (new Rect (0,0,100,50), "Score "+score+" pts");
-			GUI.Label (new Rect (0,50,100,50), "Vessie "+jauge+"%");
-			GUI.Label (new Rect (Screen.width/2-100/2,0,100,50), ""+Mathf.Round(temps)+" sec");
+			GUI.Label (new Rect (2 * Screen.width / 100, 2 * Screen.height / 100 , 20 * Screen.width/100,5*Screen.height/100), DictionnaireLang.Instance.getValue("score") + " "+score+" "+ DictionnaireLang.Instance.getValue("pts"));
+			GUI.Label (new Rect (2 * Screen.width / 100, 8 * Screen.height / 100, 40 * Screen.width / 100, 5 * Screen.height / 100), DictionnaireLang.Instance.getValue("vessie")+" " +jauge+"%");
+			GUI.Label (new Rect (40 * Screen.width / 100, 2 * Screen.height / 100, 20 * Screen.width / 100, 5 * Screen.height / 100), ""+Mathf.Round(temps)+" "+ DictionnaireLang.Instance.getValue("sec"));
 
 			if(enPause)
 			{
 				GUI.Box(new Rect(0,0,Screen.width,Screen.height),"");
-				GUI.Label(new Rect(Screen.width/2-50/2,Screen.height/2-110,100,50),"PAUSE");
-				if(GUI.Button(new Rect(Screen.width/2-150/2,Screen.height/2-55,150,50),"Reprendre"))
+				GUI.Label(new Rect(40 * Screen.width / 100, 20 * Screen.height / 100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("pause"));
+
+
+				if(GUI.Button(new Rect(40 * Screen.width/ 100, 30 *Screen.height/100,20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("continuer")))
 				{change_etat(Etat.Game);}
-				if(GUI.Button(new Rect(Screen.width/2-150/2,Screen.height/2,150,50),"Recommencer"))
-				{Application.LoadLevel(Application.loadedLevel);}
-				if(GUI.Button(new Rect(Screen.width/2-150/2,Screen.height/2+55,150,50),"Quitter"))
-				{Application.LoadLevel(0);}
+
+				if(GUI.Button(new Rect(40 * Screen.width/100, 45 * Screen.height/100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("recommencer")))
+				{ SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+
+				if(GUI.Button(new Rect(40 * Screen.width / 100, 60 * Screen.height / 100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("quitter")))
+				{ SceneManager.LoadScene(0); ; }
 			}
 		}
 		else if (etat_courant == Etat.End)
 		{
-			GUI.Box(new Rect(0,0,Screen.width,Screen.height),"Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!");
-			GUI.Label(new Rect(Screen.width/2-150/2,Screen.height/2-110,150,50),"Score "+score+" pts");
-			GUI.Label(new Rect(Screen.width/2-150/2,Screen.height/2-55,150,50),""+Mathf.Round(temps)+" sec");
-			if(GUI.Button(new Rect(Screen.width/2-150/2,Screen.height/2,150,50),"Recommencer"))
-			{Application.LoadLevel(Application.loadedLevel);}
-			if(GUI.Button(new Rect(Screen.width/2-150/2,Screen.height/2+55,150,50),"Quitter"))
-			{	Application.LoadLevel(0);}
+			GUI.Box(new Rect(0,5 * Screen.height / 100,Screen.width,Screen.height),"Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!");
+
+            GUI.Label(new Rect(40 * Screen.width / 100, 30 * Screen.height / 100, 30 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("score") + " " + score + " " + DictionnaireLang.Instance.getValue("pts"));
+
+			GUI.Label(new Rect(40 * Screen.width / 100, 45 * Screen.height / 100, 30 * Screen.width / 100, 10 * Screen.height / 100)," "+Mathf.Round(temps)+" "+ DictionnaireLang.Instance.getValue("sec"));
+			if(GUI.Button(new Rect(40 * Screen.width / 100, 60 * Screen.height / 100, 30 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("recommencer")))
+			{SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
+			if(GUI.Button(new Rect(40 * Screen.width / 100, 75 * Screen.height / 100, 30 * Screen.width / 100, 10 * Screen.height / 100),DictionnaireLang.Instance.getValue("quitter")))
+			{	SceneManager.LoadScene(0);}
 		}
 	}
 }
