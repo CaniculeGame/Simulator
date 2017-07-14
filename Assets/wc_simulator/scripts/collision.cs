@@ -6,6 +6,7 @@ public class collision : MonoBehaviour
     private GameObject gamescript = null;
 
     public GameObject pts_show;
+    public Transform positionPts;
     public float vitesse = 1f;
     public float duration = 1f;
     public float taille = 1;
@@ -16,6 +17,20 @@ public class collision : MonoBehaviour
     {
         gamescript = GameObject.Find("game");
         pts = 0;
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("coucou");
+        if (gamescript != null)
+        {
+            if (other.gameObject.name == "voiture")
+            {
+                gamescript.SendMessage("AddPoint", 100);
+                pts = 100;
+            }
+        }
     }
 
     //filtre des points de collsion
@@ -83,7 +98,7 @@ public class collision : MonoBehaviour
                     break;
 
                 case "ARMATURE":
-                    gamescript.SendMessage("AddPoint", 1);
+                    gamescript.SendMessage("AddPoint", 10);
                     pts = 1;
                     break;
 
@@ -127,16 +142,17 @@ public class collision : MonoBehaviour
                     break;
 
                 case "Route":
-                    gamescript.SendMessage("AddPoint", -10);
-                    pts = -10;
+                    gamescript.SendMessage("AddPoint", -1);
+                    pts = 1;
                     break;
 
                 case "trottoir":
-                    gamescript.SendMessage("AddPoint", -1);
-                    pts = -1;
+                    gamescript.SendMessage("AddPoint", 1);
+                    pts = 1;
                     break;
 
-                case "RENAULT21_2":
+                case "voiture":
+                    Debug.Log("voiture");
                     gamescript.SendMessage("AddPoint", 40);
                     pts = 40;
                     break;
@@ -148,13 +164,19 @@ public class collision : MonoBehaviour
                     break;
 
                 default:
-                    gamescript.SendMessage("AddPoint", 1);
-                    pts = 1;
+                    gamescript.SendMessage("AddPoint", 20);
+                    pts = 20;
                     break;
 
             }
 
-            GameObject obj = Instantiate(pts_show, other.GetComponent<Collider>().transform.position, other.GetComponent<Collider>().transform.rotation) as GameObject;
+            Transform pos;
+            if (positionPts != null)
+                pos = positionPts;
+            else
+                pos = other.GetComponent<Collider>().transform;
+
+            GameObject obj = Instantiate(pts_show,pos.position, other.GetComponent<Collider>().transform.rotation) as GameObject;
 
             if (obj != null)
             {

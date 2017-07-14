@@ -90,6 +90,5 @@ public class ia : MonoBehaviour {
 	void OnParticleCollision(GameObject other)
 	{
 		change_etat(etat_ia.courir);
-		print ("onche");
 	}
 }

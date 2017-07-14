@@ -25,6 +25,7 @@ public class game : MonoBehaviour
     public  int capacite_vessie_max = 1600;
 	public  int capacite_vessie = 1600;
 	private float temps =0;
+    private int numTextScore = 1;
 
 	
 	//score  à viser pour avoir les étoiles
@@ -35,7 +36,7 @@ public class game : MonoBehaviour
 	public Font myFont;
 
 	public GameObject player;
-	private controller scriptControlle;
+	public controller scriptControlle;
 
 
 	//initilisation de la partie
@@ -125,26 +126,33 @@ public class game : MonoBehaviour
 		switch(etat_courant)
 		{
 			case Etat.Start:
-			break;
+              //  Debug.Log("start");
+                break;
 				
 			case Etat.Pause:
-				Time.timeScale=0;
+               // Debug.Log("pause");
+                Time.timeScale=0;
 				scriptControlle.enabled = false;
 				enPause=true;
 			break;
 				
 			case Etat.Game:
+               // Debug.Log("game");
 				enPause=false;
 				Time.timeScale=1;
 				scriptControlle.enabled = true;
 			break;
 				
 			case Etat.End:
-				//Time.timeScale=0;
-				scriptControlle.SendMessage("end_jet");
+               // Debug.Log("end");
+                //Time.timeScale=0;
+                if (scriptControlle != null)
+				    scriptControlle.SendMessage("end_jet");
 				scriptControlle.enabled = false;
 				Destroy(scriptControlle.gameObject.GetComponent<Animator>());
-			break;
+                numTextScore = Random.Range(0, 5);
+
+            break;
 		}
 	}
 
@@ -196,8 +204,9 @@ public class game : MonoBehaviour
 		}
 		else if (etat_courant == Etat.End)
 		{
-			GUI.Box(new Rect(0,5 * Screen.height / 100,Screen.width,Screen.height),"Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!");
+            GUI.Box(new Rect(0, 0 * Screen.height / 100, Screen.width, Screen.height),DictionnaireLang.Instance.getValue("resultat"));
 
+            GUI.Label(new Rect(0, 5 * Screen.height / 100, Screen.width, Screen.height), DictionnaireLang.Instance.getValue("defaite"+ numTextScore.ToString()));
             GUI.Label(new Rect(40 * Screen.width / 100, 30 * Screen.height / 100, 30 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("score") + " " + score + " " + DictionnaireLang.Instance.getValue("pts"));
 
 			GUI.Label(new Rect(40 * Screen.width / 100, 45 * Screen.height / 100, 30 * Screen.width / 100, 10 * Screen.height / 100)," "+Mathf.Round(temps)+" "+ DictionnaireLang.Instance.getValue("sec"));

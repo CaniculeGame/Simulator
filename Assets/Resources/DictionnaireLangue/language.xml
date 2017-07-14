@@ -150,7 +150,7 @@
     <be>Chargement en cours</be>
   </valeur>
 
- 
+
 
   <valeur name="vibration">
     <fr>Vibrations</fr>
@@ -240,7 +240,7 @@
     <us>Sec</us>
     <be>Sec</be>
   </valeur>
-  
+
   <valeur name ="recommencer">
     <fr>Recommencer</fr>
     <en>Restart</en>
@@ -248,12 +248,69 @@
     <be>Recommencer</be>
   </valeur>
 
-  
+
   <valeur name ="choix_lvl">
     <fr>Choix du niveau</fr>
     <en>Choose Lvl</en>
     <us>Choose Lvl</us>
     <be>>Choix du niveau</be>
+  </valeur>
+
+  <valeur name ="defaite0">
+    <fr>Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!</fr>
+    <en>No translation for defaite0</en>
+    <us>No translation for defaite0</us>
+    <be>Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!</be>
+  </valeur>
+
+  <valeur name ="defaite1">
+    <fr>Ayyyyyaaaaaaaaaa !!! Comme t'as un score en tout petit </fr>
+    <en>No translation for defaite1</en>
+    <us>No translation for defaite1</us>
+    <be>Ayyyyyaaaaaaaaaa !!! Comme t'as un score en tout petit</be>
+  </valeur>
+
+  <valeur name ="defaite2">
+    <fr>Ce score de malade  O_O. Ceci dis, en 2Jours de dev, je n'ai pas eu le temps de faire la sauvegarde de score ^^'</fr>
+    <en>No translation for defaite2</en>
+    <us>No translation for defaite2</us>
+    <be>Ce score de malade  O_O. Ceci dis, en 2Jours de dev, je n'ai pas eu le temps de faire la sauvegarde de score ^^'</be>
+  </valeur>
+
+  <valeur name ="defaite3">
+    <fr>LA LA La!!! j'aime les licornes beaucoup beaucoup beaucoup, les licornes je les aimes</fr>
+    <en>No translation for defaite3</en>
+    <us>No translation for defaite3</us>
+    <be>LA LA La!!! j'aime les licornes beaucoup beaucoup beaucoup, les licornes je les aimes</be>
+  </valeur>
+
+  <valeur name ="defaite4">
+    <fr>Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!</fr>
+    <en>No translation for defaite4</en>
+    <us>No translation for defaite4</us>
+    <be>Comme j'ai la flemme d'enregitrer le score, on vas dire que t'as perdu. NO RAGE LE PUCIX!!!</be>
+  </valeur>
+
+  <valeur name ="defaite5">
+    <fr>Tu peux quand même mieux faite, j'ai confiance en toi</fr>
+    <en>No translation for defaite5</en>
+    <us>No translation for defaite5</us>
+    <be>Tu peux quand même mieux faite, j'ai confiance en toi</be>
+  </valeur>
+
+  <valeur name ="resultat">
+    <fr>Resultat</fr>
+    <en>Resul</en>
+    <us>Resul</us>
+    <be>Resultat</be>
+  </valeur>
+
+ 
+  <valeur name ="textCredit">
+    <fr>Comme ce jeux est vraiment bidon, l'auteur a préféré ne pas dévoiler son identité. Merci de votre compréhension</fr>
+    <en>No translation sorry</en>
+    <us>No translation sorry</us>
+    <be> Comme ce jeux est vraiment bidon, l'auteur a préféré ne pas dévoiler son identité. Merci de votre compréhension</be>
   </valeur>
 
 </document>

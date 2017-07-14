@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 public class main_menu : MonoBehaviour
 {
@@ -11,17 +11,19 @@ public class main_menu : MonoBehaviour
     {
         principal,
         credit,
-        jeux
+        jeux,
+        pub
     }
 
     private int tailleX = 30 * Screen.width / 100;
     private int tailleY = 10 * Screen.height / 100;
-    private Menu_page page = Menu_page.principal;
+    private Menu_page page = Menu_page.pub;
     public Font myFont;
+    public int TimeWait = 5;
 
     void Start()
     {
-        Menu_page page = Menu_page.principal;
+        page = Menu_page.pub;
         DictionnaireLang lg = DictionnaireLang.Instance;
         DictionnaireLang.Instance.Init();
 
@@ -46,11 +48,12 @@ public class main_menu : MonoBehaviour
         GUI.skin.button.fontSize = 36;
         GUI.skin.toggle.fontSize = 36;
         GUI.skin.font = myFont;
-        
+
 
         if (page == Menu_page.principal) { menu_principal(); }
         else if (page == Menu_page.jeux) { menu_jeux(); }
         else if (page == Menu_page.credit) { menu_credit(); }
+        else if (page == Menu_page.pub) { menu_pub(); }
     }
 
     void menu_jeux()
@@ -75,16 +78,39 @@ public class main_menu : MonoBehaviour
 
     void menu_credit()
     {
-        GUI.Label(new Rect(Screen.width / 2 - 50, 20, 100, 20), DictionnaireLang.Instance.getValue("credit"));
+        GUI.Label(new Rect(45 * Screen.width / 100, 5 * Screen.height / 100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("credit"));
 
-        GUI.Label(new Rect(Screen.width / 4, 100, Screen.width - Screen.width / 4, Screen.height - 100), "Comme ce jeux est vraiment bidon, l'auteur a préféré ne pas dévoiler son identité. Merci de votre compréhension");
-
+        GUI.Label(new Rect(20 * Screen.width / 100, 20 * Screen.height / 100, 60 * Screen.width / 100, 80 * Screen.height / 100), DictionnaireLang.Instance.getValue("textCredit"));
 
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             page = Menu_page.principal;
         }
+
+        if (GUI.Button(new Rect(40 * Screen.width / 100, 80 * Screen.height / 100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("quitter_vers_menu")))
+            page = Menu_page.principal;
     }
+
+    void menu_pub()
+    {
+        Debug.Log("menu_pub");
+       /* if (Advertisement.IsReady())
+        {
+            Debug.Log("pub");
+            var options = new ShowOptions { resultCallback = HandleShowResult };
+            Advertisement.Show(options);
+        }
+        else
+        {
+            if(TimeWait <= Time.time)*/
+                page = Menu_page.principal;
+      //  }
+    }
+
+ /*   private void HandleShowResult(ShowResult result)
+    {
+        page = Menu_page.principal;
+    }*/
 
 
     void menu_principal()

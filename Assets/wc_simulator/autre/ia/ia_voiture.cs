@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ia_voiture : MonoBehaviour {
 
-
+    int vie = 100;
 	// Update is called once per frame
 	void Update () 
 	{
@@ -12,13 +12,11 @@ public class ia_voiture : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other)
 	{
-		if(other.collider.tag == "voiture")
-		{
-			print ("hap");
-		}
-		else
-		{
-			print ("onche");
-		}
+       // print(other.gameObject.name);
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        // print(other.gameObject.name);
+    }
 }

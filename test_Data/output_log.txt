@@ -23,49 +23,44 @@ Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Netw
 Loading G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.086 seconds
+Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Advertisements.Unsupported.dll (this message is harmless)
+Loading G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Advertisements.Unsupported.dll into Unity Child Domain
+- Completed reload, in  0.081 seconds
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3200x1080 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.123423 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.224948 ms
+UnloadTime: 1.157116 ms
+Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\System.Xml.dll (this message is harmless)
+menu_pub
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 535.
-Total: 0.246750 ms (FindLiveObjects: 0.026425 ms CreateObjectMapping: 0.024443 ms MarkObjects: 0.180355 ms  DeleteObjects: 0.014864 ms)
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.217351 ms
+Step Offset must be less or equal to <scaled Height> + <scaled Radius> * 2
+ 
+(Filename:  Line: 642)
 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.484251 ms
+Step Offset must be less or equal to <scaled Height> + <scaled Radius> * 2
+ 
+(Filename:  Line: 642)
 
-Unloading 768 unused Assets to reduce memory usage. Loaded Objects now: 327.
-Total: 2.109433 ms (FindLiveObjects: 0.087865 ms CreateObjectMapping: 0.047235 ms MarkObjects: 0.116603 ms  DeleteObjects: 1.857398 ms)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.211736 ms
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 537.
-Total: 0.176061 ms (FindLiveObjects: 0.015855 ms CreateObjectMapping: 0.014864 ms MarkObjects: 0.136422 ms  DeleteObjects: 0.008918 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.582026 ms
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 327.
-Total: 0.691032 ms (FindLiveObjects: 0.021801 ms CreateObjectMapping: 0.022792 ms MarkObjects: 0.087535 ms  DeleteObjects: 0.558904 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.230234 ms
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 405.
-Total: 0.217021 ms (FindLiveObjects: 0.029728 ms CreateObjectMapping: 0.013873 ms MarkObjects: 0.161857 ms  DeleteObjects: 0.010900 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 546.
+Total: 0.261284 ms (FindLiveObjects: 0.029728 ms CreateObjectMapping: 0.016185 ms MarkObjects: 0.197532 ms  DeleteObjects: 0.016846 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.244437 ms
+UnloadTime: 0.491848 ms
 
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 327.
-Total: 0.239152 ms (FindLiveObjects: 0.028077 ms CreateObjectMapping: 0.013543 ms MarkObjects: 0.099757 ms  DeleteObjects: 0.097775 ms)
+Unloading 1796 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 4.302108 ms (FindLiveObjects: 0.072670 ms CreateObjectMapping: 0.089517 ms MarkObjects: 0.130146 ms  DeleteObjects: 4.009112 ms)
+
+menu_pub
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 8a8 -> priority: 1 
+  Thread -> id: 1bb0 -> priority: 1 
