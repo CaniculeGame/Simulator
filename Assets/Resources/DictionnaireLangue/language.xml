@@ -49,6 +49,27 @@
     <be>Stat</be>
   </valeur>
 
+  <valeur name="languageChoix">
+    <fr>Langue : </fr>
+    <en>Language : </en>
+    <us>Language : </us>
+    <be>Langue : </be>
+  </valeur>
+
+  <valeur name="textStat">
+    <fr>Chargement des stats mondial en cours!!!!</fr>
+    <en>No translation</en>
+    <us>No translation</us>
+    <be>Chargement des stats mondial en cours!!!!</be>
+  </valeur>
+
+  <valeur name="ethnie">
+    <fr>Ethnie : </fr>
+    <en>Ethnie : </en>
+    <us>Ethnie : </us>
+    <be>Ethnie : </be>
+  </valeur>
+
   <valeur name="option">
     <fr>Options</fr>
     <en>Option</en>
@@ -305,7 +326,7 @@
     <be>Resultat</be>
   </valeur>
 
- 
+
   <valeur name ="textCredit">
     <fr>Comme ce jeux est vraiment bidon, l'auteur a préféré ne pas dévoiler son identité. Merci de votre compréhension</fr>
     <en>No translation sorry</en>

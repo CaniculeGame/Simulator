@@ -1,19 +1,30 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Advertisements;
+using System;
 
 public class main_menu : MonoBehaviour
 {
     public GUISkin skin;
-    public bool langue = false;// 1 = fr 0= en
+    public int langue = 1;// 1 = fr 0= en
 
     enum Menu_page
     {
         principal,
         credit,
         jeux,
-        pub
+        pub,
+        stat
     }
+
+    enum EthnieEnum
+    {
+        caucase = 0,
+        asia = 1,
+        noir = 2,
+        femme = 3
+    }
+    EthnieEnum ethnie = EthnieEnum.caucase;
 
     private int tailleX = 30 * Screen.width / 100;
     private int tailleY = 10 * Screen.height / 100;
@@ -27,15 +38,52 @@ public class main_menu : MonoBehaviour
         DictionnaireLang lg = DictionnaireLang.Instance;
         DictionnaireLang.Instance.Init();
 
-        if (Application.systemLanguage == SystemLanguage.French)
+        string lgStr = PlayerPrefs.GetString("lg");
+
+        if (lgStr != "")
         {
-            DictionnaireLang.Instance.Load("DictionnaireLangue/language", "fr");
-            langue = true;
+            DictionnaireLang.Instance.Load("DictionnaireLangue/language", lgStr);
+            if (lgStr == "fr")
+                langue = 1;
+            else
+                langue = 0;
         }
         else
         {
-            DictionnaireLang.Instance.Load("DictionnaireLangue/language", "en");
-            langue = false;
+            if (Application.systemLanguage == SystemLanguage.French)
+            {
+                DictionnaireLang.Instance.Load("DictionnaireLangue/language", "fr");
+                langue = 1;
+            }
+            else
+            {
+                DictionnaireLang.Instance.Load("DictionnaireLangue/language", "en");
+                langue = 0;
+            }
+        }
+
+        int e = PlayerPrefs.GetInt("ethint", 0);
+        switch (e)
+        {
+            case 0:
+                ethnie = EthnieEnum.caucase;
+                break;
+
+            case 1:
+                ethnie = EthnieEnum.asia;
+                break;
+
+            case 2:
+                ethnie = EthnieEnum.noir;
+                break;
+
+            case 3:
+                ethnie = EthnieEnum.femme;
+                break;
+
+            default:
+                ethnie = EthnieEnum.caucase;
+                break;
         }
 
 
@@ -54,6 +102,22 @@ public class main_menu : MonoBehaviour
         else if (page == Menu_page.jeux) { menu_jeux(); }
         else if (page == Menu_page.credit) { menu_credit(); }
         else if (page == Menu_page.pub) { menu_pub(); }
+        else if (page == Menu_page.stat) { menu_stat(); }
+    }
+
+    private void menu_stat()
+    {
+        GUI.Label(new Rect(45 * Screen.width / 100, 5 * Screen.height / 100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("stats"));
+
+        GUI.Label(new Rect(20 * Screen.width / 100, 20 * Screen.height / 100, 60 * Screen.width / 100, 80 * Screen.height / 100), DictionnaireLang.Instance.getValue("textStat"));
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            page = Menu_page.principal;
+        }
+
+        if (GUI.Button(new Rect(40 * Screen.width / 100, 80 * Screen.height / 100, 20 * Screen.width / 100, 10 * Screen.height / 100), DictionnaireLang.Instance.getValue("quitter_vers_menu")))
+            page = Menu_page.principal;
     }
 
     void menu_jeux()
@@ -94,23 +158,23 @@ public class main_menu : MonoBehaviour
     void menu_pub()
     {
         Debug.Log("menu_pub");
-       /* if (Advertisement.IsReady())
-        {
-            Debug.Log("pub");
-            var options = new ShowOptions { resultCallback = HandleShowResult };
-            Advertisement.Show(options);
-        }
-        else
-        {
-            if(TimeWait <= Time.time)*/
-                page = Menu_page.principal;
-      //  }
+        /* if (Advertisement.IsReady())
+         {
+             Debug.Log("pub");
+             var options = new ShowOptions { resultCallback = HandleShowResult };
+             Advertisement.Show(options);
+         }
+         else
+         {
+             if(TimeWait <= Time.time)*/
+        page = Menu_page.principal;
+        //  }
     }
 
- /*   private void HandleShowResult(ShowResult result)
-    {
-        page = Menu_page.principal;
-    }*/
+    /*   private void HandleShowResult(ShowResult result)
+       {
+           page = Menu_page.principal;
+       }*/
 
 
     void menu_principal()
@@ -121,9 +185,9 @@ public class main_menu : MonoBehaviour
             page = Menu_page.jeux;
         }
 
-        if (GUI.Button(new Rect(35 * Screen.width / 100, 40 * Screen.height / 100, tailleX, tailleY), DictionnaireLang.Instance.getValue("test")))
+        if (GUI.Button(new Rect(35 * Screen.width / 100, 40 * Screen.height / 100, tailleX, tailleY), DictionnaireLang.Instance.getValue("stats")))
         {
-            SceneManager.LoadScene(1);
+            page = Menu_page.stat;
         }
 
 
@@ -137,12 +201,49 @@ public class main_menu : MonoBehaviour
             Application.Quit();
         }
 
+        GUI.Label(new Rect(20 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), DictionnaireLang.Instance.getValue("ethnie"));
+        if (GUI.Button(new Rect(35 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), ethnie.ToString(),skin.customStyles[1]))
+        {
+            switch (ethnie)
+            {
+                case EthnieEnum.asia:
+                    ethnie = EthnieEnum.caucase;
+                    break;
 
-        langue = GUI.Toggle(new Rect(70 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), langue, DictionnaireLang.Instance.getValue("langue"));
-        if (langue && DictionnaireLang.Instance.getLangue() != "fr")
-            DictionnaireLang.Instance.ReLoad("DictionnaireLangue/language", "fr");
-        else if (!langue && DictionnaireLang.Instance.getLangue() != "en")
-            DictionnaireLang.Instance.ReLoad("DictionnaireLangue/language", "en");
+                case EthnieEnum.caucase:
+                    ethnie = EthnieEnum.noir;
+                    break;
+
+                case EthnieEnum.noir:
+                    ethnie = EthnieEnum.femme;
+                    break;
+
+                case EthnieEnum.femme:
+                    ethnie = EthnieEnum.asia;
+                    break;
+            }
+
+            PlayerPrefs.SetString("eth", ethnie.ToString());
+            PlayerPrefs.SetInt("ethint", (int)ethnie);
+            PlayerPrefs.Save();
+        }
+
+
+
+        GUI.Label(new Rect(65 * Screen.width / 100, 90 * Screen.height / 100, 13 * Screen.width / 100, tailleY), DictionnaireLang.Instance.getValue("languageChoix"));
+        if (GUI.Button(new Rect(80 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), DictionnaireLang.Instance.getValue("langue"), skin.customStyles[1]))
+        {
+            if (langue == 1)
+            { langue = 0;
+                DictionnaireLang.Instance.ReLoad("DictionnaireLangue/language", "en"); }
+
+            else
+            { langue = 1;
+                DictionnaireLang.Instance.ReLoad("DictionnaireLangue/language", "fr"); }
+
+            PlayerPrefs.SetString("lg", DictionnaireLang.Instance.getLangue());
+            PlayerPrefs.Save();
+        }
 
 
     }
