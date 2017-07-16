@@ -202,7 +202,7 @@ public class main_menu : MonoBehaviour
         }
 
         GUI.Label(new Rect(20 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), DictionnaireLang.Instance.getValue("ethnie"));
-        if (GUI.Button(new Rect(35 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), ethnie.ToString(),skin.customStyles[1]))
+        if (GUI.Button(new Rect(35 * Screen.width / 100, 90 * Screen.height / 100, tailleX, tailleY), DictionnaireLang.Instance.getValue(ethnie.ToString()),skin.customStyles[1]))
         {
             switch (ethnie)
             {

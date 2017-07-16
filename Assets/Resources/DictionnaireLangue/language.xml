@@ -64,11 +64,40 @@
   </valeur>
 
   <valeur name="ethnie">
-    <fr>Ethnie : </fr>
-    <en>Ethnie : </en>
-    <us>Ethnie : </us>
-    <be>Ethnie : </be>
+    <fr>Perso : </fr>
+    <en>Caracter : </en>
+    <us>Caracter : </us>
+    <be>Perso : </be>
   </valeur>
+  
+  <valeur name="noir">
+    <fr>Mamadou</fr>
+    <en>Mamadou</en>
+    <us>Mamadou</us>
+    <be>Mamadou</be>
+  </valeur>
+  
+   <valeur name="asia">
+    <fr>Lee</fr>
+    <en>Lee</en>
+    <us>Lee</us>
+    <be>Lee</be>
+  </valeur>
+  
+   <valeur name="caucase">
+    <fr>Jean</fr>
+    <en>Jean</en>
+    <us>Jean</us>
+    <be>Jean</be>
+  </valeur>
+  
+    <valeur name="femme">
+    <fr>Helene</fr>
+    <en>Helene</en>
+    <us>Helene</us>
+    <be>Helene</be>
+  </valeur>
+
 
   <valeur name="option">
     <fr>Options</fr>
