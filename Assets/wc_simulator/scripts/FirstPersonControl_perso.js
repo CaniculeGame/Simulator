@@ -27,12 +27,46 @@ private var velocity : Vector3;						// Used for continuing momentum while in ai
 	var rotationX : float =0;
 	var rotationZ : float =0;
 
+	public var materials: Material[];
+	var rend: Renderer;
 
 function Start()
 {
 	// Cache component lookup at startup instead of doing this every frame		
 	thisTransform = GetComponent( Transform );
 	character = GetComponent( CharacterController );	
+
+
+    //choix penis
+	rend = GetComponent.<Renderer>();
+	var e = PlayerPrefs.GetInt("ethint", 0);
+	switch (e)
+	{
+	    case 0:
+	        this.transform.localScale =  Vector3(0.35f, 0.35f , 0.35f);
+            rend.sharedMaterial = materials[0];
+	        break;
+
+	    case 1:
+	        this.transform.localScale =  Vector3(0.15f, 0.15f, 0.15f);
+	        rend.sharedMaterial = materials[1];
+	        break;
+
+	    case 2:
+	        this.transform.localScale =  Vector3(0.35f, 0.55f, 0.25f);
+	        rend.sharedMaterial = materials[2];
+	        break;
+
+	    case 3:
+	        this.transform.localScale =  Vector3(0.035f, 0.035f, 0.035f);
+	        rend.sharedMaterial = materials[3];
+	        break;
+
+	    default:
+	        this.transform.localScale =  Vector3(0.25f, 0.35f, 0.25f);
+	        rend.sharedMaterial = materials[0];
+	        break;
+	}
 }
 
 function OnEndGame()

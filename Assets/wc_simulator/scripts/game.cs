@@ -52,8 +52,9 @@ public class game : MonoBehaviour
 		enPause = false;
 		scriptControlle = player.GetComponentInChildren<controller>();
 		scriptControlle.enabled = false;
-		//scriptControlle.gameObject.GetComponent<Animator>().enabled=true;
-	}
+        //scriptControlle.gameObject.GetComponent<Animator>().enabled=true;
+
+    }
 	
 	// Update is called once per frame
 	void Update () 
