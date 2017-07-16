@@ -43,7 +43,7 @@ function Start()
 	switch (e)
 	{
 	    case 0:
-	        this.transform.localScale =  Vector3(0.35f, 0.35f , 0.35f);
+	        this.transform.localScale =  Vector3(0.25f, 0.25f , 0.25f);
             rend.sharedMaterial = materials[0];
 	        break;
 
@@ -63,7 +63,7 @@ function Start()
 	        break;
 
 	    default:
-	        this.transform.localScale =  Vector3(0.25f, 0.35f, 0.25f);
+	        this.transform.localScale =  Vector3(0.25f, 0.25f, 0.25f);
 	        rend.sharedMaterial = materials[0];
 	        break;
 	}

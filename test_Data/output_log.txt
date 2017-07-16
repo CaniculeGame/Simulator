@@ -25,21 +25,21 @@ Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Play
 Loading G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Advertisements.Unsupported.dll (this message is harmless)
 Loading G:\unity\Projets\Simulator\test_Data\Managed\UnityEngine.Advertisements.Unsupported.dll into Unity Child Domain
-- Completed reload, in  0.081 seconds
+- Completed reload, in  0.163 seconds
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3200x1080 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.157116 ms
+UnloadTime: 1.180899 ms
 Platform assembly: G:\unity\Projets\Simulator\test_Data\Managed\System.Xml.dll (this message is harmless)
 menu_pub
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.217351 ms
+UnloadTime: 0.220654 ms
 Step Offset must be less or equal to <scaled Height> + <scaled Radius> * 2
  
 (Filename:  Line: 642)
@@ -49,18 +49,23 @@ Step Offset must be less or equal to <scaled Height> + <scaled Radius> * 2
 (Filename:  Line: 642)
 
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 546.
-Total: 0.261284 ms (FindLiveObjects: 0.029728 ms CreateObjectMapping: 0.016185 ms MarkObjects: 0.197532 ms  DeleteObjects: 0.016846 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 551.
+Total: 0.227261 ms (FindLiveObjects: 0.035014 ms CreateObjectMapping: 0.014864 ms MarkObjects: 0.163839 ms  DeleteObjects: 0.013212 ms)
+
+IndexOutOfRangeException: Array index is out of range.
+  at FirstPersonControl_perso.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.491848 ms
+UnloadTime: 0.465753 ms
 
-Unloading 1796 unused Assets to reduce memory usage. Loaded Objects now: 335.
-Total: 4.302108 ms (FindLiveObjects: 0.072670 ms CreateObjectMapping: 0.089517 ms MarkObjects: 0.130146 ms  DeleteObjects: 4.009112 ms)
+Unloading 1778 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 4.561078 ms (FindLiveObjects: 0.069697 ms CreateObjectMapping: 0.110327 ms MarkObjects: 0.130476 ms  DeleteObjects: 4.250576 ms)
 
 menu_pub
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1bb0 -> priority: 1 
+  Thread -> id: 2150 -> priority: 1 

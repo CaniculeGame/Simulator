@@ -8,6 +8,8 @@ public class main_menu : MonoBehaviour
     public GUISkin skin;
     public int langue = 1;// 1 = fr 0= en
 
+    private int size;
+
     enum Menu_page
     {
         principal,
@@ -92,9 +94,17 @@ public class main_menu : MonoBehaviour
     void OnGUI()
     {
         GUI.skin = skin;
-        GUI.skin.label.fontSize = 36;
-        GUI.skin.button.fontSize = 36;
-        GUI.skin.toggle.fontSize = 36;
+
+        if (Screen.width >= 1900)
+            size = 36;
+        else if (Screen.width >= 1366 && Screen.width < 1024)
+            size = 30;
+        else
+            size = 24;
+
+        GUI.skin.label.fontSize = size;
+        GUI.skin.button.fontSize = size;
+        GUI.skin.toggle.fontSize = size;
         GUI.skin.font = myFont;
 
 
